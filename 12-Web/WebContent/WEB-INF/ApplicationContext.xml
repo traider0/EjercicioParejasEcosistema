@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+<bean id="ds" class="org.apache.commons.dbcp.BasicDataSource">
+	<property name="driverClassName" value="org.apache.derby.jdbc.EmbeddedDriver"/>
+	<property name="url" value="jdbc:derby:D:\\Cursos\\Spring-Maven\\workspace1\\db"/>
+</bean>
+
+<bean id="dao" class="com.aeat.portalparejas.persistencia.dao.PersonaDaoImpl">
+	<property name="dataSource" ref="ds"/>
+</bean>
+
+<bean id="reglas" class="com.aeat.portalparejas.modelo.negocio.ReglasJavaImpl"/>
+
+<bean id="servicio" class="com.aeat.portalparejas.modelo.servicios.ServicioParejasImpl">
+	<property name="dao" ref="dao"/>
+	<property name="reglas" ref="reglas"/>
+</bean>
+
+</beans>
