@@ -10,7 +10,7 @@ import org.junit.Test;
 import com.aeat.portalparejas.modelo.entidades.Persona;
 import com.aeat.portalparejas.persistencia.dao.PersonaDaoHibernateTemplateImpl;
 
-public class HibernateDaoTest {
+public class HibernateDaoTestIT {
 
 	private static SessionFactory sessionFactory;
 	

@@ -6,7 +6,7 @@ import org.hibernate.cfg.Configuration;
 
 import com.aeat.portalparejas.modelo.entidades.Persona;
 
-public class TestHibernate {
+public class TestHibernateIT {
 
 	private static SessionFactory sessionFactory;
 
